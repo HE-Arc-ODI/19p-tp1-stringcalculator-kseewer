@@ -20,7 +20,28 @@ public class StringCalculator {
 		if(text.equals("")){
 			return 0;
 		}
-        return parseInt(text);
+                else{
+                    String delimiter = ",";
+                    
+                    String numList[] = text.split(delimiter);
+                    
+                    int total = 0;
+                    
+                    for ( String number : numList){
+                        
+                        total = total + parseInt(number,10);
+                        
+                       
+                        
+                        
+                        
+                    }
+                    
+                     return total;
+                    
+                }
+        
+        
 		
 }
     

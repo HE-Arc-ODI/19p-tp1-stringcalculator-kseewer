@@ -23,5 +23,10 @@ public class StringCalculatorTest {
             StringCalculator Calculator = new StringCalculator();
 		assertEquals(0, Calculator.add(""));
 }
+    @Test    
+        public void test2Valeursavecvirgule() {
+            StringCalculator Calculator = new StringCalculator();
+		assertEquals(3, Calculator.add("1,2"));
     
+}
 }
