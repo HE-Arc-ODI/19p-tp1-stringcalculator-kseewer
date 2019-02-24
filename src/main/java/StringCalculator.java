@@ -22,23 +22,33 @@
                     }
                     else{
                         String delimiter = ",";
-
-                        String numList[] = text.split(delimiter);
-
+                        if(text.matches("//(.*)\n(.*)")){
+				delimiter = Character.toString(text.charAt(2));
+				text = text.substring(4);
+                    }
+                        
+                    
+                    String numList[] = splitNumbers(text, delimiter +"|\n");
                         int total = 0;
-
+                    
                         for ( String number : numList){  
                             
-                            total += parseInt(number,10);
+                            total =total + parseInt(number,10);
                         }
-
-                         return total;
-
+                            return total;
                     }
+                           
+                      
+     
+        }
+
+    
+     private static String[] splitNumbers(String numbers, String delimiteur) {
+        return numbers.split(delimiteur);
+       }
+}
 
 
+   
 
-    }
-
-    }
 

@@ -44,4 +44,12 @@ public class StringCalculatorTest {
     
 }
         
+      @Test
+    public void test1Ligne(){
+         StringCalculator Calculator = new StringCalculator();
+    	assertEquals(6, Calculator.add("1\n2,3"));
+        
+    }
+  
+        
 }
