@@ -64,5 +64,23 @@ public class StringCalculatorTest {
         
     	assertEquals(3, Calculator.add("//;\n1;2"));
 }
+    
+    
+      @Test
+    public void testNegatif(){
+    	try {
+			Calculator.add("-1,2");
+		}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Les négatifs ne sont pas acceptés: -1");
+		}
+
+		try {
+			Calculator.add("2,-4,3,-5");
+		}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Les négatifs ne sont pas acceptés: -4,-5");
+		}
+}
         
 }

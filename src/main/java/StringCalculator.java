@@ -27,12 +27,21 @@
                         
                     String numList[] = splitNumbers(text, delimiter +"|\n");
                         int total = 0;
-                        for ( String number : numList){
+                        String negatif = "";
+                        for ( String number : numList){if(parseInt(number) < 0){
+        		if(negatif.equals(""))
+        			negatif = number;
+        		else
+        			negatif += ("," + number);
+}
                             if(parseInt(number)<1000) {
                                
                               total += parseInt(number);
                             }
                         }
+                        if(!negatif.equals("")){
+			throw new IllegalArgumentException("Les négatifs ne sont pas acceptés: " + negatif);
+}
                             return total;
                     }
         }
