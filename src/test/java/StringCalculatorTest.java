@@ -82,5 +82,9 @@ public class StringCalculatorTest {
 			assertEquals(e.getMessage(), "Les négatifs ne sont pas acceptés: -4,-5");
 		}
 }
+     public void testmultipleDelimiteur(){
         
+    	assertEquals(6, Calculator.add("//[*]\\n1**2**3"));
+}
+  
 }
