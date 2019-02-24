@@ -1,4 +1,3 @@
-
     import static java.lang.Integer.parseInt;
     import java.util.ArrayList;
     import java.util.List;
@@ -15,7 +14,6 @@
      */
     public class StringCalculator {
 
-
         public static int add(String text){
                     if(text.equals("")){
                             return 0;
@@ -27,19 +25,13 @@
 				text = text.substring(4);
                     }
                         
-                    
                     String numList[] = splitNumbers(text, delimiter +"|\n");
                         int total = 0;
-                    
                         for ( String number : numList){  
-                            
-                            total =total + parseInt(number,10);
+                              total += parseInt(number,10);
                         }
                             return total;
                     }
-                           
-                      
-     
         }
 
     
