@@ -56,5 +56,11 @@ public class StringCalculatorTest {
          StringCalculator Calculator = new StringCalculator();
     	assertEquals(50, Calculator.add("1000,50"));
 }
+    
+     @Test
+    public void testOtherDelimiter(){
+         StringCalculator Calculator = new StringCalculator();
+    	assertEquals(3, Calculator.add("//;\n1;2"));
+}
         
 }
