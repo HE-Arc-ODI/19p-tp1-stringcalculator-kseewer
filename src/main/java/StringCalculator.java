@@ -27,8 +27,11 @@
                         
                     String numList[] = splitNumbers(text, delimiter +"|\n");
                         int total = 0;
-                        for ( String number : numList){  
-                              total += parseInt(number,10);
+                        for ( String number : numList){
+                            if(parseInt(number)<1000) {
+                               
+                              total += parseInt(number);
+                            }
                         }
                             return total;
                     }

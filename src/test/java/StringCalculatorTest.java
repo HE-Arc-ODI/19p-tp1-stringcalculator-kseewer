@@ -51,5 +51,10 @@ public class StringCalculatorTest {
         
     }
   
+      @Test
+    public void testPlusGrandMille(){
+         StringCalculator Calculator = new StringCalculator();
+    	assertEquals(50, Calculator.add("1000,50"));
+}
         
 }
