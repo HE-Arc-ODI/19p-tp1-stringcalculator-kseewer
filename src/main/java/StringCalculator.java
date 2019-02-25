@@ -21,6 +21,7 @@
       }
      }
 
+     // Pourquoi faire une mÃ©thode pour une seule ligne?
      private static String[] splitNumbers(String numbers, String delimiteur) {
       return numbers.split(delimiteur);
      }
@@ -43,7 +44,7 @@
        }
       }
       if (!negatif.equals("")) {
-       throw new IllegalArgumentException("Les négatifs ne sont pas acceptés: " + negatif);
+       throw new IllegalArgumentException("Les nï¿½gatifs ne sont pas acceptï¿½s: " + negatif);
       }
       return total;
 
